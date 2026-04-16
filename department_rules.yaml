@@ -1,0 +1,123 @@
+default_profile: backend_engineering
+profiles:
+  backend_engineering:
+    must_have_skills:
+      - Python
+      - FastAPI
+      - SQL
+    nice_to_have_skills:
+      - PostgreSQL
+      - Docker
+    minimum_years_experience: 3
+    preferred_domains:
+      - recruiting
+      - resume
+      - hiring
+    required_languages:
+      - English
+    required_education:
+      - Computer Science
+    location_constraints:
+      - China
+    work_authorization: Eligible to work in China
+    seniority_keywords:
+      - backend
+      - engineer
+      - ownership
+    tool_keywords:
+      - Python
+      - FastAPI
+      - SQL
+      - PostgreSQL
+    scoring_weights:
+      must_have_semantic: 0.45
+      nice_to_have_semantic: 0.15
+      seniority_alignment: 0.15
+      domain_alignment: 0.15
+      tool_stack_alignment: 0.10
+
+  ai_platform:
+    must_have_skills:
+      - Python
+      - Ollama
+      - FastAPI
+    nice_to_have_skills:
+      - vector databases
+      - PyMuPDF
+    minimum_years_experience: 4
+    preferred_domains:
+      - ai platform
+      - ml infrastructure
+    required_languages:
+      - English
+    required_education:
+      - Computer Science
+    location_constraints:
+      - China
+    work_authorization: Eligible to work in China
+    seniority_keywords:
+      - platform
+      - infrastructure
+      - lead
+    tool_keywords:
+      - Python
+      - FastAPI
+      - Ollama
+      - PyMuPDF
+
+  product_manager:
+    must_have_skills:
+      - product strategy
+      - stakeholder management
+      - roadmap
+    nice_to_have_skills:
+      - analytics
+      - experimentation
+    minimum_years_experience: 5
+    preferred_domains:
+      - saas
+      - hr tech
+    required_languages:
+      - English
+    required_education:
+      - Business
+    location_constraints:
+      - China
+    work_authorization: Eligible to work in China
+    seniority_keywords:
+      - product
+      - strategy
+      - leadership
+    tool_keywords:
+      - analytics
+      - sql
+      - figma
+
+  hr_tech_operations:
+    must_have_skills:
+      - operations
+      - recruiting
+      - stakeholder management
+    nice_to_have_skills:
+      - automation
+      - SQL
+    minimum_years_experience: 3
+    preferred_domains:
+      - hr tech
+      - recruiting
+      - talent operations
+    required_languages:
+      - English
+    required_education:
+      - Human Resources
+    location_constraints:
+      - China
+    work_authorization: Eligible to work in China
+    seniority_keywords:
+      - operations
+      - process
+      - coordination
+    tool_keywords:
+      - ATS
+      - automation
+      - SQL

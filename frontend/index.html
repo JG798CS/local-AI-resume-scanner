@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hiring Workflow</title>
+    <link rel="stylesheet" href="/ui/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">HW</div>
+          <div>
+            <h1>Hiring Workflow</h1>
+            <p>Local recruiter workspace</p>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="#/jobs">Jobs</a>
+        </nav>
+        <div class="sidebar-note">
+          <p>Runs fully local against the FastAPI backend.</p>
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Recruiter MVP</p>
+            <h2 id="page-title">Jobs</h2>
+          </div>
+          <div id="status-banner" class="status-banner hidden"></div>
+        </header>
+        <section id="app" class="page-root">
+          <div class="loading-state">Loading…</div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/ui/app.js"></script>
+  </body>
+  </html>
