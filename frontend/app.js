@@ -3,6 +3,7 @@ const pageTitle = document.getElementById('page-title');
 const statusBanner = document.getElementById('status-banner');
 const stages = ['initial_screen', 'first_round', 'second_round'];
 
+function setPageTheme(name) { document.body.dataset.page = name; }
 function setTitle(title) { pageTitle.textContent = title; }
 function setStatus(message, kind = 'success') {
   if (!message) {
@@ -95,6 +96,7 @@ function candidateCardMarkup(candidate) {
   return Promise.all(list.items.map((item) => api(`/jobs/${jobId}/candidates/${item.candidate_id}`)));
 }
 async function renderJobsPage() {
+  setPageTheme('jobs');
   setTitle('Jobs');
   renderLoading('Loading jobs…');
   const jobs = await api('/jobs');
@@ -163,6 +165,7 @@ async function renderJobsPage() {
   });
 }
 async function renderJobDetail(jobId) {
+  setPageTheme('pipeline');
   setTitle('Job pipeline');
   renderLoading('Loading job pipeline…');
   const [job, candidates, shortlist] = await Promise.all([api(`/jobs/${jobId}`), loadCandidateDetails(jobId), api(`/jobs/${jobId}/shortlist`)]);
@@ -236,6 +239,7 @@ function explainabilitySection(explainability = {}) {
     </div>`;
 }
 async function renderCandidateDetail(jobId, candidateId) {
+  setPageTheme('candidate');
   setTitle('Candidate detail');
   renderLoading('Loading candidate detail…');
   const [candidate, feedback] = await Promise.all([api(`/jobs/${jobId}/candidates/${candidateId}`), api(`/jobs/${jobId}/candidates/${candidateId}/feedback`)]);
@@ -303,6 +307,7 @@ async function renderCandidateDetail(jobId, candidateId) {
   });
 }
 async function renderComparisonPage(jobId, stage = 'first_round') {
+  setPageTheme('comparison');
   setTitle('Candidate comparison');
   renderLoading('Loading comparison workspace…');
   const [job, candidates] = await Promise.all([api(`/jobs/${jobId}`), loadCandidateDetails(jobId)]);
@@ -431,6 +436,9 @@ async function render() {
 document.addEventListener('click', handleClick);
 window.addEventListener('hashchange', () => { setStatus(''); render(); });
 render();
+
+
+
 
 
 
